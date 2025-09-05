@@ -14,3 +14,13 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+
+// BD Simulated
+const users = [
+    {
+        id: 1,
+        username: 'admin',
+        // password: '1234'
+        passwordHash: bcrypt.hashSync('1234', 10)
+    }
+];
